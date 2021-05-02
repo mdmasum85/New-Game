@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+/* start share game  */
+.share_game {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background: #fff;
+}
+.share_game_start {
+    position: relative;
+    top: 0%;
+    left: 50%;
+    width: 350px;
+    height: 500px;
+    transform: translate(-50% ,0%);
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: rgb(44,36,51);
+   display: block;
+}
+/*  name_board  */
+.name_board {
+    position: relative;
+    text-align: center;
+    top: 5px;
+    width: 350px;
+    height: 40px;
+    
+}
+.name_board h1{
+    font-size: 30px;
+    color: #fff;
+}
+/*  score_board  */
+.score_board{
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 100px;
+    text-align: center;
+   
+}
+.player1 {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 90px;
+    width: 150px;
+    border-radius: 20px;
+    background: ;
+    text-align: center;
+    color: rgb(255,28,251);
+}
+.player2 {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    height: 90px;
+    width: 150px;
+    border-radius: 20px;
+    background: ;
+    text-align: center;
+    color: rgb(127,139,237);
+}
+.you,.com {
+    position: absolute;
+    display: flex;
+    top: 40%;
+    left: 50%;
+    font-size: 30px;
+    color: rgb(0,230,64);
+}
+/*  show_board  */
+.show_board {
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 100px;
+    overflow: hidden;
+}
+.left_board {
+    position: absolute;
+    top: 5px;
+    width: 150px;
+    height: 90px;
+}
+.right_board {
+    position: absolute;
+    top: 5px;
+    right: 0;
+    width: 150px;
+    height: 90px;
+}
+
+ .left_board h1{
+    position: absolute;
+    font-size: 70px;
+    top: -35px;
+    }
+ .right_board h1{
+    position: absolute;
+    font-size: 70px;
+    top: -35px;
+    right: 0;
+    }
+    .football, .football2 {
+        z-index: 3;
+    }
+    
+/*  control*/
+.all_fingers,.noo_fingers,.two_fingers {
+    position: absolute;
+    display: none;
+    animation: left_animation 1s ease forwards;
+}
+ .two_fingers2, .all_fingers2, .no_fingers2 {
+     position: absolute;
+     display: none;
+     animation: right_animation  1s ease forwards;
+ }
+
+/*  text_board  */
+.text_board {
+    position: relative;
+    width: 350px;
+    height: 70px;
+    text-align: center;
+    justify-content: center;
+}
+.text_board h1{
+    font-size: 40px;
+    color: #00ffe6;
+}
+/*  button_board  */
+.button_board{
+    position: relative;
+    display: flex;
+    width: 350px;
+    height: 60px;
+    margin-top: 20px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+.button_board button {
+    margin-right: 10px;
+    height: 40px;
+    width: 90px;
+    background: #363a3c17;
+    border-radius: 10px;
+    border: 2px solid black;
+    font-size: 20px;
+    color: #fff;
+}
+button:hover {
+border: 2px solid #fff;
+}
+/*   result_box */
+.result_box {
+    position: relative;
+    width: 350px;
+    height: 60vh;
+    background: #e6eff2;
+    top: 40px;
+    border-radius: 10px;
+    z-index: 99;
+    animation: resultkey 2s ease forwards;
+    display: none;
+    
+
+}
+.score_result {
+    width: 350px;
+    height: 80px;
+}
+
+.heading_text {
+    position: absolute;
+    left: 20%;
+    top: 50px;
+    color: #ff00cd;
+    font-size: 50px;
+}
+.pscr {
+    position: absolute;
+    left: 20px;
+    color: green;
+}
+.cscr{
+ position: absolute;   
+ right: 20px;
+ color: green;
+}
+.stiker {
+    position: relative;
+    font-size: 80px;
+ text-align: center;
+    top: 60px;
+}
+.result_box button {
+   position: relative;
+   top: 20px;
+   height: 50px;
+   width: 90px ;
+   background: #00ff56;
+   border: 2px solid #1f272a;
+   border-radius: 10px;
+    margin-left: 100px;
+    font-size: 30px;
+    color: #fff;
+}
+.result_box button:hover {
+   border: 2px solid #fff;
+    
+}
+/*  zoom box */
+.zoom_box {
+    position: relative;
+    margin: 10px 5px 0px 5px;
+    width: 340px;
+    height: 8vh;
+    background: #9bf8b1;
+    border-radius: 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: space;
+    animation: zoom_ani 0.8s ease forwards;
+    display: none;
+}
+  
+.zoom_box button {
+    position: relative;
+    background: none;
+    border-radius: 10px;
+    width: 100px;
+    margin: 5px;
+    border: 2px solid #222c2f;
+    font-size: 30px;
+}
+.zoom_box button:hover {
+    border: 2px solid #fff;
+}
+
+@keyframes left_animation {
+    0%{
+        position: absolute;
+        opacity: 10%;
+        left: 0;
+    }
+    100%{
+        position: absolute;
+        left: 80px;
+        opacity: 100%;
+    }
+}
+@keyframes right_animation {
+    0%{
+        position: absolute;
+        opacity: 10%;
+    }
+    100%{
+        position: absolute;
+        right: 80px;
+        opacity: 100%;
+    }
+}
+
+@keyframes resultkey{
+    0%{
+       transform: rotatex(180deg);
+       opacity: 0;
+    }
+20%{
+       transform: rotateY(0deg);
+    opacity: 100%;
+}
+40%{
+       transform: rotateY(0deg);
+    
+}
+60%{
+       transform: rotateX(20deg);
+    
+}
+80%{
+       transform: rotateX(0deg);
+    
+}
+    100%{
+    opacity: 100%;
+    }
+}
+
+  @keyframes zoom_ani {
+        0%{
+           position: absolute;
+           left: 300px
+           
+        }
+        100%{
+            position: absolute;
+            left: 0;
+        }
+    }
