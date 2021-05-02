@@ -22,6 +22,7 @@ body {
     box-sizing: border-box;
     border-radius: 10px;
     background: rgb(44,36,51);
+    overflow: hidden;
    display: block;
 }
 /*  name_board  */
