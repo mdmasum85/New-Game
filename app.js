@@ -192,32 +192,4 @@ quiet_button.onclick = ()=>{
 quite.onclick = ()=>{
    window.location.reload();
 }
-//music option
-  let upp = 4;
-  let dw = 0;
-  let randomm = Math.floor(Math.random() * (upp - dw) +1);
-  function play(){
-      // body...
-
-const music1 = document.querySelector(".music1");
-const music2 = document.querySelector(".music2");
-const music3 = document.querySelector(".music3");
-const music4 = document.querySelector(".music4");
-
-
-if (randomm == 1) {
-    music1.play();
-}
-if (randomm == 2) {
-    music2.play();
-}
-if (randomm == 3) {
-    music3.play();
-}
-if (randomm == 4) {
-    music4.play();
-}
-    
-  }
-
-
+//
