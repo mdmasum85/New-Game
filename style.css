@@ -3,12 +3,130 @@ body {
     padding: 0;
     font-family: Verdana;
 }
+.game_start {
+    position: relative;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 400px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,5%);
+    border-radius: 20px;
+    background: #00ff57;
+    display: flex;
+}
+.img{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    left: 0%;
+    border-radius: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    border: 1px dotted #ffffff;
+    overflow: hidden;
+}
+.img_cover{
+    position: absolute;
+    left: 0;
+    width: 150px;
+    height: auto;
+}
+#name {
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    font-size: 40px;
+    color: #1000ff;
+    text-align: center;
+    border-bottom: 2px dotted #fff;
+}
+.button_play {
+    position: relative;
+    display: block;
+    width: 100px;
+    height: 50px;
+    background: red;
+    outline: none;
+    border: none;
+    font-size: 30px;
+    color: #fff;
+    border-radius: 20px;
+    border-radius: 30px;
+    font-family: Georgia;
+    margin-top: 10px;
+    left: 37%;
+    transform: transform(-50% -50%);
+}
+.button_play:hover{
+ background: #fff;
+ color: red;
+ 
+}
+.info_box {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    top: 0%;
+    left: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    transform: translate(-50% ,5%);
+    border-radius: 20px;
+    background: #00ffd9;
+    display: none;
+}
+.img_div {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    transform: translate(-50% ,1%);
+    overflow: hidden;
+}
+.img_info {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    left: 0;
+    
+}
+.Hey {
+    font-size: 30px;
+    color: #fff;
+}
+.info_box ul {
+    text-align: left;
+    color: blue;
+    font-size: 18px;
+    line-height: 1.5fr;
+}
+.info_box ul li span {
+    color: rgb(215,0,233);
+}
+.ext {
+    width: 100px;
+    height: 40px;
+    border-radius: 20px;
+    background: #00ff86;
+    color: #fff;
+    font-size: 20px;
+}
 /* start share game  */
 .share_game {
     position: absolute;
     height: 100vh;
     width: 100%;
-    background: #fff;
+    background: rgb(151,209,191);
 }
 .share_game_start {
     position: relative;
@@ -21,22 +139,45 @@ body {
     justify-content: center;
     box-sizing: border-box;
     border-radius: 10px;
-    background: rgb(44,36,51);
-   display: block;
+    background:rgb(6,191,255);
+    overflow: hidden;
+    display: none;
 }
 /*  name_board  */
 .name_board {
     position: relative;
     text-align: center;
-    top: 5px;
     width: 350px;
     height: 40px;
-    
+  
 }
 .name_board h1{
-    font-size: 30px;
+    font-size: 15px;
     color: #fff;
+    text-transform: uppercase;
+  
 }
+.main_img {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border: 1px dotted #fff;
+    border-radius: 50%;
+    top: 0;
+    left: 35%;
+    z-index: -1;
+    overflow: hidden;
+}
+.m_img {
+    position: absolute;
+    width: 100px;
+    height: auto;
+    top: 0;
+    left: 0;
+    
+}
+
+
 /*  score_board  */
 .score_board{
     position: relative;
@@ -44,44 +185,52 @@ body {
     width: 350px;
     height: 100px;
     text-align: center;
-   
+
 }
 .player1 {
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: 30px;
+    left: 30px;
     height: 90px;
     width: 150px;
     border-radius: 20px;
-    background: ;
     text-align: center;
-    color: rgb(255,28,251);
+    color: #00ff9d;
+    font-size: 10px;
 }
 .player2 {
     position: absolute;
-    top: 5px;
+    top: 30px;
     right: 10px;
     height: 90px;
     width: 150px;
     border-radius: 20px;
-    background: ;
     text-align: center;
-    color: rgb(127,139,237);
+    color: #fff;
+    font-size: 10px;
 }
 .you,.com {
-    position: absolute;
-    display: flex;
-    top: 40%;
-    left: 50%;
+    position: relative;
+    display: block;
+    top: 0px;
+    left: 30%;
+    width: 60px;
     font-size: 30px;
-    color: rgb(0,230,64);
+    margin: 0;
+    text-align: center;
+    border: 2px solid green;
+    border-radius: 15px;
+    color: #fff;
+    
 }
+
 /*  show_board  */
 .show_board {
     position: relative;
     display: flex;
     width: 350px;
     height: 100px;
+    top: 10px;
     overflow: hidden;
 }
 .left_board {
@@ -147,6 +296,7 @@ body {
     text-align: center;
     align-items: center;
     justify-content: center;
+    transition: 1s ease;
 }
 .button_board button {
     margin-right: 10px;
@@ -160,6 +310,14 @@ body {
 }
 button:hover {
 border: 2px solid #fff;
+}
+.again_button {
+    position: relative;
+    display: none;
+}
+.quiet_button {
+    position: relative;
+    display: none;
 }
 /*   result_box */
 .result_box {
@@ -211,7 +369,7 @@ border: 2px solid #fff;
    background: #00ff56;
    border: 2px solid #1f272a;
    border-radius: 10px;
-    margin-left: 100px;
+   left: 40%;
     font-size: 30px;
     color: #fff;
 }
@@ -224,7 +382,7 @@ border: 2px solid #fff;
     position: relative;
     margin: 10px 5px 0px 5px;
     width: 340px;
-    height: 8vh;
+    height: 50px;
     background: #9bf8b1;
     border-radius: 10px;
     text-align: center;
@@ -240,12 +398,12 @@ border: 2px solid #fff;
     border-radius: 10px;
     width: 100px;
     margin: 5px;
-    margin-top: 0;
     border: 2px solid #222c2f;
     font-size: 30px;
 }
 .zoom_box button:hover {
     border: 2px solid #fff;
+    background: #00ff18;
 }
 
 @keyframes left_animation {
@@ -309,3 +467,41 @@ border: 2px solid #fff;
             left: 0;
         }
     }
+    .football {
+        position: absolute;
+       
+    }
+    
+        @keyframes footballplay {
+        0%{
+            position: absolute;
+          transform: rotate(0deg);
+        }
+        100%{
+            position: absolute;
+          transform: rotate(360deg);
+        }
+    }
+    .logo_active {
+        position: fixed;
+        bottom: 20px;
+        left: 10px;
+        font-size: 10px;
+        color: #fff;
+        outline: none;
+        text-decoration: none;
+        z-index: 999;
+    }
+    .logo_active:hover {
+        color: red;
+    }
+@keyframes text_show_ani {
+    0%{
+        opacity: 0;
+        font-size: 40px;
+    }
+    100%{
+        opacity: 1;
+        font-size: 40px;
+    }
+}
