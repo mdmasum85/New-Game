@@ -5,22 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="animation.css" type="text/css" media="all" />
-    <title>Rock paper scissors</title>
+   
+    <title>Md Masum Parvez</title>
 </head>
 <body>
     <!--******†*****************
     body
   *****************************-->
+   
     <!--start share game  -->
-    <div class="share_game">
+    <div  class="share_game">
+         <div class="game_start">
+             <div class="img">
+                 
+        <img class="img_cover"  src="masum.jpg" alt="" />
+             </div>
+            <input type="file" class="input" name="file"  value="" hidden />
+        <form action="" class="form" name="form" method="get" onsubmit="submitform(event)" accept-charset="utf-8">
+            <input type="text" name="name" id="name" value="" placeholder="Name"/>
+            <input class="button_play" type="submit" name="" id="" value="Play" />
+        </form>
+        </div>
+        
         <div class="share_game_start">
         <div class="name_board">
-            <h1>MASUM</h1>
+            <h1 class="player_name">Rock Paper Scissors</h1>
+            <div class="main_img">
+            <img class="m_img" src="masum.jpg" alt="" />
+            </div>
         </div>
         <div class="score_board">
             <div class="player1">
-                <h1>You</h1>
+                <div class="hidd">
+                <h1 class="playn">You</h1>
+                </div>
                 <h2 class="you">0</h2>
             </div>
             <div class="player2">
@@ -43,7 +61,6 @@
             
             </div>
         </div>
-
         <div class="text_board">
             
             <h1 class="text_show">Let's play</h1>
@@ -62,8 +79,8 @@
     </div>
             <div class="result_box">
           <div class="score_result">
-                <h1 class="pscr">🧒 00</h1>
-                <h1 class="cscr">00 💻</h1>
+                <h1 class="pscr"></h1>
+                <h1 class="cscr"></h1>
               </div>
             <h1 class="heading_text"></h1>
             <h1 class="stiker"></h1>
@@ -71,14 +88,26 @@
           
      </div>
     </div>
+    <div class="info_box">
+            <div class="img_div">
+                <img class="img_info" src="masum.jpg" alt="" />
+            </div>
+            <h1 class="Hey">Hey Player</h1>
+            <ul class="">
+                <li>This game is between you and Computer</li>
+                <li>You need <span>10</span> points to win.</li>
+                <li>The game will start in <span class="time_count"> 10 </span> seconds.</li>
+            </ul>
+            <button class="ext" type="submit">Quite</button>
+        </div>
     
-
-
-
+    <a class="logo_active" href="https://www.facebook.com/mdmasum">Powdered by MASUM</a>
+    <!--end share game  -->
     
     
     <!-- JavaScript -->
-    <script src="selector.js" type="text/javascript" charset="utf-8"></script>
+    
+    <script src="select.js" type="text/javascript" charset="utf-8"></script>
     <script src="app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
