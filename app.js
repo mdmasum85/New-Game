@@ -1,195 +1,322 @@
-
+//let function
+let up = 3;
+let down = 0;
+let youValu = you.textContent;
+let comValu = com.textContent;
+let file;
 //share game starts
-const pscr = document.querySelector(".pscr");
-const cscr = document.querySelector(".cscr");
-const zoom_box = document.querySelector(".zoom_box");
-const quiet_button = document.querySelector(".quiet_button");
-const exem = document.querySelector(".exem");
-const football = document.querySelector(".football");
-const football2 = document.querySelector(".football2");
+//img onclick
+img_cover.onclick = () =>{
+  input.click();
+};
+m_img.onclick = ()=>{
+   input.click();
+};
+//img loader
+input.addEventListener("change", function(){
+  file = this.files[0];
+  showFile();
+  submitform(e);
+});
 
-const two_fingers = document.querySelector(".two_fingers");
-const all_fingers = document.querySelector(".all_fingers");
-const noo_fingers = document.querySelector(".noo_fingers");
-const no_fingers2 = document.querySelector(".no_fingers2");
-const all_fingers2 = document.querySelector(".all_fingers2");
-const two_fingers2 = document.querySelector(".two_fingers2");
-const text_show = document.querySelector(".text_show");
-const you = document.querySelector(".you");
-const com = document.querySelector(".com");
-const result_box = document.querySelector(".result_box");
-const heading_text = document.querySelector(".heading_text");
-const stiker = document.querySelector(".stiker");
-const button1 = document.querySelector(".button1");
-const button2 = document.querySelector(".button2");
-const button3 = document.querySelector(".button3");
-const again = document.querySelector(".again");
-const quite = document.querySelector(".quite");
-const play_button = document.querySelector(".play_button");
-const share_game_start = document.querySelector(".share_game_start");
-// Share game start
- let up = 3;
- let down = 0;
-let youValu = 0;
-let comValu = 0;
-play_button.onclick= ()=>{
-    zoom_box.style.display=('flex');
+//Submit form
+function submitform(e) {
+e.preventDefault();
+let user_name =document.forms["form"]["name"].value;
+Hey.textContent ="Hey " + user_name;
+startTimer(10);
+info_box.style.display=('block');
+game_start.style.display=('none');
+playn.textContent = user_name;
+if (user_name === ""){
+playn.textContent = "You";
 }
-// all onclick Function
-/*  Calling all random function  */
-function random_call(){
-    
-   let random = Math.floor(Math.random() * (up - down) + 1);
+if (user_name === "9999"){
+    playn.textContent = "Masum" ;
+   info_box.style.display=('none');
+   share_game_start.style.display=('block');
+}
 
+}
+
+
+
+
+
+// Share game start
+//play button
+play_button.onclick = ()=>{
+ play_button.style.display=('none');
+ zoom_box.style.display=('flex');
+ again_button.style.display=('block');
+ quiet_button.style.display=('block');
+};
+
+
+
+// all random Function
+function random_call(){
+   let random = Math.floor(Math.random() * (up - down) + 1);
       if (random == 1){
         two_fingers2.style.display=('flex');
         all_fingers2.style.display=('none');
         no_fingers2.style.display=('none');
-        text_show.textContent= "You are friends";
-        
-       
+        text_show.textContent= "It is a tie!";
     }
     if (random == 2){
         all_fingers2.style.display=('flex');
         two_fingers2.style.display=('none');
         no_fingers2.style.display=('none');
-        text_show.textContent= "You wine";
+        text_show.textContent= "You wine🎉";
         youValu++;
-        updatescoreP();
-        
+        updatescore();
     }
     if (random == 3){
         no_fingers2.style.display=('flex');
         all_fingers2.style.display=('none');
         two_fingers2.style.display=('none');
-        text_show.textContent= "You lose";
+        text_show.textContent= "You lose😔";
        comValu++;
-       updatescoreC();
-      
+       updatescore();
     }
-   
-  
 }
 function random_call2(){
-  
    let random = Math.floor(Math.random() * (up - down) + 1);
-
       if (random == 1){
         two_fingers2.style.display=('flex');
         all_fingers2.style.display=('none');
         no_fingers2.style.display=('none');
-        text_show.textContent= "You lose";
+        text_show.textContent= "You lose😔";
         comValu++;
-        updatescoreC();
-       
+        updatescore();
       }
     if (random == 2){
         all_fingers2.style.display=('flex');
         no_fingers2.style.display=('none');
        two_fingers2.style.display=('none');
-        text_show.textContent= "You are friends";
-       
+        text_show.textContent= "It is a tie!";
     }
     if (random == 3){
-        no_fingers2.style.display=('flex');
+       no_fingers2.style.display=('flex');
        all_fingers2.style.display=('none');
        two_fingers2.style.display=('none');
-        text_show.textContent= "You win";
+       text_show.textContent= "You win🎉";
        youValu++;
-       updatescoreP();
-     
+       updatescore();
     }
-   
- 
+    
 }
 function random_call3(){
- 
    let random = Math.floor(Math.random() * (up - down) + 1);
 
       if (random == 1){
+        
         two_fingers2.style.display=('flex');
         all_fingers2.style.display=('none');
         no_fingers2.style.display=('none');
-        text_show.textContent= "You win";
+        text_show.textContent= "You win🎉";
         youValu++;
-        updatescoreP();
-    
+        updatescore();
       }
     if (random == 2){
         all_fingers2.style.display=('flex');
         no_fingers2.style.display=('none');
         two_fingers2.style.display=('none');
-        text_show.textContent= "You lose";
+        text_show.textContent= "You lose😔";
         comValu++;
-        updatescoreC();
-  
+        updatescore();
     }
     if (random == 3){
         no_fingers2.style.display=('flex');
         all_fingers2.style.display=('none');
         two_fingers2.style.display=('none');
-        text_show.textContent= "You are friends";
-     
+        text_show.textContent= "It is a tie!";
     }
 }
+
+
 /*    updatescore      */
-function updatescoreP(){
+function updatescore(){
     you.textContent = youValu;
-    let pScore = youValu;
-    
-    if (pScore >= 10) {
-        result_box.style.display=('block');
-         zoom_box.style.display=('none');
-         share_game_start.style.display=('none');
-         
-    }
-     pscr.textContent = "🧒 " + pScore;
-    heading_text.textContent = "🎊You win";
-     stiker.textContent = "🎉";
-    console.log(pScore);
-}
-function updatescoreC(){
     com.textContent = comValu;
-    let cScore = comValu;
-    
-     if (cScore >= 10) {
-        result_box.style.display=('block');
-        zoom_box.style.display=('none');
-        share_game_start.style.display=('none');
-       
+    pscr.innerHTML = "🧒" + youValu;
+    cscr.textContent = comValu + "💻";
+   same();
+    function same(argument) {
+    if (youValu > comValu) {
+        console.log('you')
+        com.style.border=('3px solid red');
+        you.style.border=('2px solid green');
     }
-     cscr.textContent = cScore + "💻";
+    if (youValu < comValu) {
+        you.style.border=('3px solid red');
+        com.style.border=('2px solid green');
+    }
+    if (youValu == comValu) {
+        you.style.border=('2px solid green');
+        com.style.border=('2px solid green');
+    }
+   
+    }
+ if (youValu >= 10){
+     share_game_start.style.display=('none');
+     result_box.style.display=('block');
+     zoom_box.style.display=('none');
+     heading_text.textContent = "🎊You win";
+     stiker.textContent = "🎉";
+     youValu -= youValu;
+     comValu -= comValu;
+     you.textContent = "0";
+     com.textContent = "0";
+     you.style.border=('2px solid green');
+     com.style.border=('2px solid green');
+    }
+    
+ if (comValu >= 10) {
+     share_game_start.style.display=('none');
+     result_box.style.display=('block');
+     zoom_box.style.display=('none');
      heading_text.textContent = "🥺You lose";
      stiker.textContent = "😔";
-    console.log(cScore);
+     youValu -= youValu;
+     comValu -= comValu;
+     you.textContent = "0";
+     com.textContent = "0";
+     you.style.border=('2px solid green');
+     com.style.border=('2px solid green');
+ }
+ 
 }
-/*      Down button      */
+
+
+
+/*      click button      */
 button1.onclick= ()=>{
+   ani();
     random_call();
     two_fingers.style.display=('flex');
     noo_fingers.style.display=('none');
     all_fingers.style.display=('none');
+text_show_ani();
+    
 };
 button2.onclick= ()=>{
+    ani();
     random_call2();
     all_fingers.style.display=('flex');
     two_fingers.style.display=('none');
     noo_fingers.style.display=('none');
+    text_show_ani();
 };
 button3.onclick= ()=>{
+    ani();
     random_call3();
     noo_fingers.style.display=('flex');
     two_fingers.style.display=('none');
     all_fingers.style.display=('none');
+text_show_ani();
+    
 };
 /*  end button*/
 
 
-
+// quiet button
 quiet_button.onclick = ()=>{
    window.location.reload();
 }
-quite.onclick = ()=>{
+ext.onclick = ()=>{
    window.location.reload();
 }
-//
+
+again_button.onclick = ()=>{
+     youValu -= youValu;
+     comValu -= comValu;
+     you.textContent = "0";
+     com.textContent = "0";
+     you.style.border=('2px solid green');
+     com.style.border=('2px solid green');
+     text_show.textContent = "Let's play";
+   two_fingers.style.display=('none');
+ all_fingers.style.display=('none');
+ noo_fingers.style.display=('none');
+ two_fingers2.style.display=('none');
+ all_fingers2.style.display=('none');
+ no_fingers2.style.display=('none');
+}
+
+
+
+//football animation
+function ani() {
+    // body...
+   
+     football.style.animation=("footballplay 1s ease forwards");
+     football2.style.animation=("footballplay 1s ease forwards");
+    
+    football.addEventListener("animationend" , function(){
+    this.style.animation = "";
+});
+    football2.addEventListener("animationend" , function(){
+    this.style.animation = "";
+});
+}
+function text_show_ani() {
+     text_show.style.animation= ("text_show_ani 0.9s ease forwards");
+   text_show.addEventListener("animationend" , function(){
+    this.style.animation = "";
+});
+    
+}
+
+
+//showFile
+function showFile(){
+  let fileType = file.type;
+  let validExtensions = ["image/jpeg", "image/jpg", "image/png"];
+  if(validExtensions.includes(fileType)){ 
+    let fileReader = new FileReader(); 
+    fileReader.onload = ()=>{
+      let fileURL = fileReader.result;
+    img_cover.src = fileURL;
+    m_img.src = fileURL;
+    img_info.src = fileURL;
+    }
+    fileReader.readAsDataURL(file);
+  }
+  else{
+    alert("This is not an Image File!");
+  }
+}
+
+
+function startTimer(time){
+    counter = setInterval(timer, 1000);
+    function timer(){
+        timeCount.textContent = time;
+        console.log(time);
+        time--; 
+        if(time < 9){
+            let addZero = timeCount.textContent; 
+            timeCount.textContent = "0" + addZero;
+        }
+        if(time < 0){ 
+            clearInterval(counter);
+            info_box.style.display=('none');
+            share_game_start.style.display=('block');
+        }
+    }
+}
+
+quite.onclick = ()=>{
+ result_box.style.display=('none');
+ share_game_start.style.display=('block');
+ zoom_box.style.display=('flex');
+ two_fingers.style.display=('none');
+ all_fingers.style.display=('none');
+ noo_fingers.style.display=('none');
+ two_fingers2.style.display=('none');
+ all_fingers2.style.display=('none');
+ no_fingers2.style.display=('none');
+ text_show.textContent = "Let's play";
+ 
+}
